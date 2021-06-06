@@ -62,14 +62,6 @@ class MovieViewController: UIViewController {
     }
 
     
-    func getIntToString(id : Int?)-> (String) {
-        //convert a Int? to String
-        let ID = id.flatMap { String($0) }
-        // unwrapped the optional with a guard let syntaxe
-        guard let strData = ID else { return "aie" }
-        return strData
-    }
-
     func convertDateFormater(_ date: String?) -> String {
             var fixDate = ""
             let dateFormatter = DateFormatter()
@@ -82,6 +74,15 @@ class MovieViewController: UIViewController {
             }
             return fixDate
         }
+    
+    func getIntToString(id : Int?)-> (String) {
+        //convert a Int? to String
+        let ID = id.flatMap { String($0) }
+        // unwrapped the optional with a guard let syntaxe
+        guard let strData = ID else { return "aie" }
+        return strData
+    }
+
 
 }
 
@@ -101,4 +102,4 @@ extension UIImageView {
     }
     
 }
-//http://image.tmdb.org/t/p/w185/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg
+

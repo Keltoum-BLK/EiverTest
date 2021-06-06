@@ -18,17 +18,41 @@ class ListViewCell: UITableViewCell {
     @IBOutlet weak var descMovie: UITextView!
     
     
-    var list: [ListMovie] = []
+    func setup(_ movie: ListMovie) {
+        contentView.layer.cornerRadius = 10
+        titleMovie.text = movie.title
+        date.text = convertDateFormater(movie.releaseDate)
+        descMovie.text = movie.overview
+        posterMovie.loadPoster(185, movie.posterImage ?? "no image")
+    }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func convertDateFormater(_ date: String?) -> String {
+            var fixDate = ""
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            if let originalDate = date {
+                if let newDate = dateFormatter.date(from: originalDate) {
+                    dateFormatter.dateFormat = "dd.MM.yyyy"
+                    fixDate = dateFormatter.string(from: newDate)
+                }
+            }
+            return fixDate
+        }
+}
+
+extension UIImageView {
+
+    func loadPoster(_ size: Int, _ path: String) {
+        let urlString = "https://image.tmdb.org/t/p/w\(size)\(path)"
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { (d, _, _) in
+            DispatchQueue.main.async {
+                if let data = d {
+                    self.image = UIImage(data: data)
+
+                }
+            }
+        }.resume()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }

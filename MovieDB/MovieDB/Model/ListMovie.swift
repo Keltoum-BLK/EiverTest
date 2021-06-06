@@ -23,6 +23,7 @@ struct ListMovie: Decodable {
     let overview: String?
     let title: String?
     let releaseDate: String?
+    let posterImage : String?
    
 
    
@@ -31,7 +32,7 @@ struct ListMovie: Decodable {
         case overview
         case releaseDate = "release_date"
         case title
-        
+        case posterImage = "poster_path"
     }
 }
 

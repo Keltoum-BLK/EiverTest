@@ -13,7 +13,6 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var genderId: Int?
-    
     private var listArray: [ListMovie]?
     private var titlemovie : ListMovie?
     private var genre : GenreModel?
@@ -41,6 +40,20 @@ class ListViewController: UIViewController {
             }
         }
     }
+    
+    
+    func convertDateFormater(_ date: String?) -> String {
+            var fixDate = ""
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            if let originalDate = date {
+                if let newDate = dateFormatter.date(from: originalDate) {
+                    dateFormatter.dateFormat = "dd.MM.yyyy"
+                    fixDate = dateFormatter.string(from: newDate)
+                }
+            }
+            return fixDate
+        }
     
     func getIntToString(id : Int?)-> (String) {
         //convert a Int? to String
