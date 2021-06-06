@@ -6,11 +6,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="CinematograficaB.ttf">
-            <string>Cinematografica-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--FILMS-->
         <scene sceneID="sXe-Wk-bk0">
@@ -66,65 +61,63 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="FIlms2019.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="FW4-Dw-QoO">
                                         <rect key="frame" x="0.0" y="-17" width="414" height="739"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pka-HS-9NO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pka-HS-9NO">
                                         <rect key="frame" x="20" y="19" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="za8-w2-LbD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Cinematografica-Bold" family="Cinematografica" pointSize="35"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="34"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="5" height="3"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fb3-Hi-v2f">
-                                        <rect key="frame" x="87" y="63" width="240" height="356"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-I3-wEO">
-                                        <rect key="frame" x="60" y="442" width="294" height="30"/>
+                                        <rect key="frame" x="60" y="356" width="291" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="J0C-Lh-DWD"/>
+                                            <constraint firstAttribute="height" constant="40" id="J0C-Lh-DWD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="5" height="5"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-Sb-jM0">
-                                        <rect key="frame" x="60" y="484" width="294" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="60" y="426" width="294" height="27"/>
+                                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="5" height="5"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-hj-8c3" userLabel="Overview">
-                                        <rect key="frame" x="87" y="519" width="240" height="175"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-hj-8c3" userLabel="Overview">
+                                        <rect key="frame" x="32" y="485" width="347" height="175"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="175" id="Hq5-AL-vpl"/>
+                                        </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="pka-HS-9NO" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="top" constant="19" id="3Ro-Me-pvZ"/>
-                                    <constraint firstItem="fb3-Hi-v2f" firstAttribute="top" secondItem="pka-HS-9NO" secondAttribute="bottom" constant="4" id="4SK-LF-eSP"/>
                                     <constraint firstAttribute="trailing" secondItem="FW4-Dw-QoO" secondAttribute="trailing" id="6kx-nc-ulj"/>
                                     <constraint firstItem="pka-HS-9NO" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="20" id="7xR-9D-1qK"/>
-                                    <constraint firstItem="HS1-I3-wEO" firstAttribute="top" secondItem="fb3-Hi-v2f" secondAttribute="bottom" constant="23" id="B8y-1d-Paj"/>
-                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="leading" secondItem="fb3-Hi-v2f" secondAttribute="leading" id="M3Q-tX-UQe"/>
+                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="top" secondItem="lq3-Sb-jM0" secondAttribute="bottom" constant="32" id="8DH-dM-kwu"/>
+                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="centerX" secondItem="lq3-Sb-jM0" secondAttribute="centerX" constant="-1.5" id="FqR-Ie-NBZ"/>
                                     <constraint firstAttribute="trailing" secondItem="lq3-Sb-jM0" secondAttribute="trailing" priority="750" constant="60" id="OEX-wH-itc"/>
                                     <constraint firstItem="lq3-Sb-jM0" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="60" id="Rek-86-kr5"/>
                                     <constraint firstAttribute="trailing" secondItem="pka-HS-9NO" secondAttribute="trailing" constant="20" id="XNy-xg-faE"/>
-                                    <constraint firstAttribute="trailing" secondItem="fb3-Hi-v2f" secondAttribute="trailing" constant="87" id="YRX-5u-mdZ"/>
-                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="trailing" secondItem="fb3-Hi-v2f" secondAttribute="trailing" id="bW9-jC-fwu"/>
+                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="32" id="Yle-Fw-XTz"/>
                                     <constraint firstItem="FW4-Dw-QoO" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="top" constant="-17" id="bi1-6a-cZL"/>
-                                    <constraint firstItem="lq3-Sb-jM0" firstAttribute="top" secondItem="HS1-I3-wEO" secondAttribute="bottom" constant="12" id="c2o-fY-DNV"/>
-                                    <constraint firstAttribute="bottom" secondItem="ky6-hj-8c3" secondAttribute="bottom" constant="28" id="gVB-LF-FVu"/>
+                                    <constraint firstItem="lq3-Sb-jM0" firstAttribute="top" secondItem="HS1-I3-wEO" secondAttribute="bottom" constant="30" id="c2o-fY-DNV"/>
+                                    <constraint firstAttribute="bottom" secondItem="ky6-hj-8c3" secondAttribute="bottom" constant="62" id="gVB-LF-FVu"/>
                                     <constraint firstItem="HS1-I3-wEO" firstAttribute="centerX" secondItem="ky6-hj-8c3" secondAttribute="centerX" id="jhl-LM-uj7"/>
-                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="top" secondItem="lq3-Sb-jM0" secondAttribute="bottom" constant="17" id="kUu-vG-LvK"/>
-                                    <constraint firstAttribute="bottom" secondItem="fb3-Hi-v2f" secondAttribute="bottom" constant="303" id="mNi-dw-GTc"/>
                                     <constraint firstItem="HS1-I3-wEO" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="60" id="n0q-rP-sRv"/>
-                                    <constraint firstItem="fb3-Hi-v2f" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="top" constant="63" id="nYe-QP-FDu"/>
                                     <constraint firstAttribute="bottom" secondItem="FW4-Dw-QoO" secondAttribute="bottom" id="qQz-fM-rUI"/>
-                                    <constraint firstItem="fb3-Hi-v2f" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="87" id="t7Y-lm-YuV"/>
                                     <constraint firstItem="FW4-Dw-QoO" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" id="uen-z6-YTX"/>
                                 </constraints>
                             </view>
@@ -139,8 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="CHJ-15-N2q"/>
                     <connections>
-                        <outlet property="bg" destination="t1i-K4-41Y" id="nHV-3J-Zfi"/>
-                        <outlet property="imageMovie" destination="fb3-Hi-v2f" id="DYf-Qc-wh4"/>
+                        <outlet property="backgroundImage" destination="FW4-Dw-QoO" id="RDn-aY-cGh"/>
                         <outlet property="originalTitle" destination="HS1-I3-wEO" id="aNY-pB-jVc"/>
                         <outlet property="overview" destination="ky6-hj-8c3" id="8Dh-AU-cJA"/>
                         <outlet property="releaseDate" destination="lq3-Sb-jM0" id="dx2-Ly-tzT"/>
@@ -208,9 +200,6 @@
     </scenes>
     <resources>
         <image name="FIlms2019.jpeg" width="753.65576171875" height="1826.7716064453125"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

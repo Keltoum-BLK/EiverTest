@@ -12,9 +12,8 @@ class MovieViewController: UIViewController {
 
 
     
-    @IBOutlet weak var bg: UIView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var titleMovie: UILabel!
-    @IBOutlet weak var imageMovie: UIImageView!
     @IBOutlet weak var originalTitle: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var overview: UITextView!
@@ -58,8 +57,7 @@ class MovieViewController: UIViewController {
         originalTitle.text = selectedMovie.originalTitle
         overview.text = selectedMovie.overview
        releaseDate.text = selectedMovie.releaseDate
-        imageMovie.load(185, selectedMovie.posterPath ?? "no image")
-        
+        backgroundImage.load(780, selectedMovie.posterPath ?? "no image")
         
     }
 
@@ -71,25 +69,14 @@ class MovieViewController: UIViewController {
         guard let strData = ID else { return "aie" }
         return strData
     }
-   
-  
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
 extension UIImageView {
 
     func load(_ size: Int, _ path: String) {
-        let urlString = "http://image.tmdb.org/t/p/" + "w\(size)//" + path
+        let urlString = "https://image.tmdb.org/t/p/w\(size)\(path)"
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (d, _, _) in
             DispatchQueue.main.async {
@@ -102,3 +89,4 @@ extension UIImageView {
     }
     
 }
+//http://image.tmdb.org/t/p/w185/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg
