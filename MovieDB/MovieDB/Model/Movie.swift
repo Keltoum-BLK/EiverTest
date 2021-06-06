@@ -15,7 +15,7 @@ struct MovieModel: Decodable {
     var posterPath: String?
     var releaseDate: String?
     var title: String?
-    var voteAverage: String?
+ 
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -24,6 +24,6 @@ struct MovieModel: Decodable {
         case posterPath = "poster_path"
         case releaseDate = "release_date"
         case title = "title"
-        case voteAverage = "vote_average"
+      
     }
 }

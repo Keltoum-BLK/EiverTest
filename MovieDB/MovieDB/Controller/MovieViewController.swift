@@ -18,7 +18,7 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var originalTitle: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var overview: UITextView!
-    @IBOutlet weak var rateNote: UILabel!
+    
     
    
     var movieID: Int?
@@ -72,7 +72,7 @@ class MovieViewController: UIViewController {
         return strData
     }
    
-    
+  
     
     /*
     // MARK: - Navigation

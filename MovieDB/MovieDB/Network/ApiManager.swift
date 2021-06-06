@@ -47,19 +47,17 @@ class ApiManager {
                 return
             }
             do {
-                
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(MovieModel.self, from: data)
-          
                 DispatchQueue.main.async {
                     completionHandler(.success(jsonData))
-                    print(jsonData)
                 }
             } catch let error {
                 completionHandler(.failure(error))
             }
         }
         dataTask?.resume()
+        
     }
     
     func getListOfMoviesGender(genreID: String, completionHandler: @escaping (Result<List, Error>) -> Void) {
