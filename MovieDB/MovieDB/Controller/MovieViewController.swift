@@ -56,7 +56,7 @@ class MovieViewController: UIViewController {
         titleMovie.text = selectedMovie.title
         originalTitle.text = selectedMovie.originalTitle
         overview.text = selectedMovie.overview
-       releaseDate.text = selectedMovie.releaseDate
+        releaseDate.text = convertDateFormater(selectedMovie.releaseDate)
         backgroundImage.load(780, selectedMovie.posterPath ?? "no image")
         
     }
@@ -70,6 +70,18 @@ class MovieViewController: UIViewController {
         return strData
     }
 
+    func convertDateFormater(_ date: String?) -> String {
+            var fixDate = ""
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            if let originalDate = date {
+                if let newDate = dateFormatter.date(from: originalDate) {
+                    dateFormatter.dateFormat = "dd.MM.yyyy"
+                    fixDate = dateFormatter.string(from: newDate)
+                }
+            }
+            return fixDate
+        }
 
 }
 
