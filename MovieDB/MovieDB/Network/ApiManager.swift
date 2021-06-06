@@ -21,43 +21,45 @@ class ApiManager {
         case network
     }
     func getMovieDetails(movieID: String, completionHandler: @escaping (Result<MovieModel, Error>) -> Void) {
+        
+        let movieURL = "https://api.themoviedb.org/3/movie/\(movieID)?api_key=\(API_KEY)&language=fr-FR"
+        
+        
+        guard let url = URL(string: movieURL) else { return }
+        
+        dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if let error = error {
+                completionHandler(.failure(error))
+                print("DataTask error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                print("Empty Response")
+                return
+            }
+            
+            print("Response status code: \(response.statusCode)")
+            
+            guard let data = data else {
+                print("Emplty Data")
+                return
+            }
+            do {
+                
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(MovieModel.self, from: data)
           
-          let movieURL = "https://api.themoviedb.org/3/movie/\(movieID)?api_key=\(API_KEY)&language=fr-FR"
-          
-          
-          guard let url = URL(string: movieURL) else { return }
-          
-          dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-              
-              if let error = error {
-                  completionHandler(.failure(error))
-                  print("DataTask error: \(error.localizedDescription)")
-                  return
-              }
-              
-              guard let response = response as? HTTPURLResponse else {
-                  print("Empty Response")
-                  return
-              }
-              
-              print("Response status code: \(response.statusCode)")
-              
-              guard let data = data else {
-                  print("Emplty Data")
-                  return
-              }
-              do {
-                  let decoder = JSONDecoder()
-                  let jsonData = try decoder.decode(MovieModel.self, from: data)
-                 
-                  DispatchQueue.main.async {
-                      completionHandler(.success(jsonData))
-                  }
-              } catch let error {
-                  completionHandler(.failure(error))
-              }
-          }
-          dataTask?.resume()
+                DispatchQueue.main.async {
+                    completionHandler(.success(jsonData))
+                    print(jsonData)
+                }
+            } catch let error {
+                completionHandler(.failure(error))
+            }
+        }
+        dataTask?.resume()
     }
     
     func getListOfMoviesGender(genreID: String, completionHandler: @escaping (Result<List, Error>) -> Void) {

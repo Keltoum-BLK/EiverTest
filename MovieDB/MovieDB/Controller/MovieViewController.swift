@@ -23,7 +23,6 @@ class MovieViewController: UIViewController {
    
     var movieID: Int?
     var movie: MovieModel?
-    var movieBy = MovieModel()
 
     
     override func viewDidLoad() {
@@ -37,7 +36,6 @@ class MovieViewController: UIViewController {
         let ID = getIntToString(id: movieID)
 
         ApiManager.shared.getMovieDetails(movieID: ID, completionHandler: { result in
-
             switch result {
             case .success(let use):
                 // guard let movie = use else { return }
@@ -60,6 +58,8 @@ class MovieViewController: UIViewController {
         originalTitle.text = selectedMovie.originalTitle
         overview.text = selectedMovie.overview
        releaseDate.text = selectedMovie.releaseDate
+        imageMovie.load(185, selectedMovie.posterPath ?? "no image")
+        
         
     }
 
@@ -71,14 +71,7 @@ class MovieViewController: UIViewController {
         guard let strData = ID else { return "aie" }
         return strData
     }
-    
-    func getToString(str: String?)-> (String) {
-        //convert a Int? to String
-        let str = readLine()
-        // unwrapped the optional with a guard let syntaxe
-        guard let strImage = str  else { return "" }
-        return strImage
-    }
+   
     
     
     /*
@@ -95,12 +88,15 @@ class MovieViewController: UIViewController {
 
 extension UIImageView {
 
-    func download(_ urlString: String) {
+    func load(_ size: Int, _ path: String) {
+        let urlString = "http://image.tmdb.org/t/p/" + "w\(size)//" + path
         guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let imageData = data, let image = UIImage(data: imageData) else { return }
+        URLSession.shared.dataTask(with: url) { (d, _, _) in
             DispatchQueue.main.async {
-                self.image = image
+                if let data = d {
+                    self.image = UIImage(data: data)
+
+                }
             }
         }.resume()
     }

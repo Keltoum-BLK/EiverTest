@@ -63,6 +63,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1i-K4-41Y">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="FIlms2019.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="FW4-Dw-QoO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pka-HS-9NO">
                                         <rect key="frame" x="20" y="19" width="374" height="40"/>
                                         <constraints>
@@ -109,6 +112,7 @@
                                 <constraints>
                                     <constraint firstItem="pka-HS-9NO" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="top" constant="19" id="3Ro-Me-pvZ"/>
                                     <constraint firstItem="fb3-Hi-v2f" firstAttribute="top" secondItem="pka-HS-9NO" secondAttribute="bottom" constant="4" id="4SK-LF-eSP"/>
+                                    <constraint firstAttribute="trailing" secondItem="FW4-Dw-QoO" secondAttribute="trailing" id="6kx-nc-ulj"/>
                                     <constraint firstItem="pka-HS-9NO" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="20" id="7xR-9D-1qK"/>
                                     <constraint firstItem="HS1-I3-wEO" firstAttribute="top" secondItem="fb3-Hi-v2f" secondAttribute="bottom" constant="23" id="B8y-1d-Paj"/>
                                     <constraint firstItem="Prb-co-7dZ" firstAttribute="centerX" secondItem="ky6-hj-8c3" secondAttribute="centerX" id="EBS-Qv-Uwa"/>
@@ -118,14 +122,17 @@
                                     <constraint firstAttribute="trailing" secondItem="pka-HS-9NO" secondAttribute="trailing" constant="20" id="XNy-xg-faE"/>
                                     <constraint firstAttribute="trailing" secondItem="fb3-Hi-v2f" secondAttribute="trailing" constant="87" id="YRX-5u-mdZ"/>
                                     <constraint firstItem="ky6-hj-8c3" firstAttribute="trailing" secondItem="fb3-Hi-v2f" secondAttribute="trailing" id="bW9-jC-fwu"/>
+                                    <constraint firstItem="FW4-Dw-QoO" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="top" id="bi1-6a-cZL"/>
                                     <constraint firstItem="lq3-Sb-jM0" firstAttribute="top" secondItem="HS1-I3-wEO" secondAttribute="bottom" constant="12" id="c2o-fY-DNV"/>
                                     <constraint firstItem="HS1-I3-wEO" firstAttribute="centerX" secondItem="ky6-hj-8c3" secondAttribute="centerX" id="jhl-LM-uj7"/>
                                     <constraint firstItem="ky6-hj-8c3" firstAttribute="top" secondItem="lq3-Sb-jM0" secondAttribute="bottom" constant="17" id="kUu-vG-LvK"/>
                                     <constraint firstAttribute="bottom" secondItem="fb3-Hi-v2f" secondAttribute="bottom" constant="303" id="mNi-dw-GTc"/>
                                     <constraint firstItem="HS1-I3-wEO" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="60" id="n0q-rP-sRv"/>
                                     <constraint firstItem="fb3-Hi-v2f" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="top" constant="63" id="nYe-QP-FDu"/>
+                                    <constraint firstAttribute="bottom" secondItem="FW4-Dw-QoO" secondAttribute="bottom" id="qQz-fM-rUI"/>
                                     <constraint firstItem="fb3-Hi-v2f" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="87" id="t7Y-lm-YuV"/>
                                     <constraint firstItem="Prb-co-7dZ" firstAttribute="top" secondItem="ky6-hj-8c3" secondAttribute="bottom" constant="44" id="tT3-je-gw5"/>
+                                    <constraint firstItem="FW4-Dw-QoO" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" id="uen-z6-YTX"/>
                                     <constraint firstAttribute="bottom" secondItem="Prb-co-7dZ" secondAttribute="bottom" constant="16" id="wEB-XZ-rB5"/>
                                     <constraint firstItem="HS1-I3-wEO" firstAttribute="centerX" secondItem="Prb-co-7dZ" secondAttribute="centerX" id="wiN-Y4-fAL"/>
                                 </constraints>
@@ -210,6 +217,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FIlms2019.jpeg" width="753.65576171875" height="1826.7716064453125"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
