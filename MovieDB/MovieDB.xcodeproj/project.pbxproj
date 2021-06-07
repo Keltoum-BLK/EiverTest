@@ -13,6 +13,7 @@
 		B92DF848266E03A900868C3C /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DF846266E03A900868C3C /* MovieViewCell.swift */; };
 		B92DF849266E03A900868C3C /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92DF847266E03A900868C3C /* MovieViewCell.xib */; };
 		B92DF855266E24CC00868C3C /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DF854266E24CC00868C3C /* Tool.swift */; };
+		B92DF858266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png in Resources */ = {isa = PBXBuildFile; fileRef = B92DF857266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png */; };
 		B936ED5D26679B790016C56B /* CinematograficaB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B936ED5C26679B790016C56B /* CinematograficaB.ttf */; };
 		B94D1C212666D2BC00ECF9A7 /* FIlms2019.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B94D1C202666D2BC00ECF9A7 /* FIlms2019.jpeg */; };
 		B94D1C242666D84B00ECF9A7 /* ListMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D1C232666D84B00ECF9A7 /* ListMovie.swift */; };
@@ -34,6 +35,7 @@
 		B92DF846266E03A900868C3C /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		B92DF847266E03A900868C3C /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 		B92DF854266E24CC00868C3C /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
+		B92DF857266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png"; path = "../../../Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png"; sourceTree = "<group>"; };
 		B936ED5C26679B790016C56B /* CinematograficaB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = CinematograficaB.ttf; path = ../../../CinematograficaB.ttf; sourceTree = "<group>"; };
 		B94D1C202666D2BC00ECF9A7 /* FIlms2019.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FIlms2019.jpeg; sourceTree = "<group>"; };
 		B94D1C232666D84B00ECF9A7 /* ListMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovie.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				B96789942666D1C700E6B7FB /* AppDelegate.swift */,
 				B96789962666D1C700E6B7FB /* SceneDelegate.swift */,
 				B936ED5C26679B790016C56B /* CinematograficaB.ttf */,
+				B92DF857266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png */,
 				B94D1C202666D2BC00ECF9A7 /* FIlms2019.jpeg */,
 			);
 			path = SupportFiles;
@@ -228,6 +231,7 @@
 				B936ED5D26679B790016C56B /* CinematograficaB.ttf in Resources */,
 				B96789A12666D1C800E6B7FB /* LaunchScreen.storyboard in Resources */,
 				B94D1C212666D2BC00ECF9A7 /* FIlms2019.jpeg in Resources */,
+				B92DF858266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png in Resources */,
 				B967899E2666D1C800E6B7FB /* Assets.xcassets in Resources */,
 				B967899C2666D1C700E6B7FB /* Main.storyboard in Resources */,
 			);
