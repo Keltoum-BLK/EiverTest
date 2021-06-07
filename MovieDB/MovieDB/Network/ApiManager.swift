@@ -62,8 +62,8 @@ class ApiManager {
     
     func getListOfMoviesGender(genreID: String, completionHandler: @escaping (Result<List, Error>) -> Void) {
         
-        let moviesGenderURL = "https://api.themoviedb.org/3/discover/movie?api_key=\(API_KEY)&language=fr-FR&include_adult=false&include_video=false&page=1&with_genres=" + (String(describing: genreID))
-        
+        let moviesGenderURL =
+        "https://api.themoviedb.org/3/discover/movie?api_key=\(API_KEY)&language=fr-FR&include_adult=false&include_video=false&page=1&with_genres=\(String(describing: genreID))"
         
         guard let url = URL(string: moviesGenderURL) else { return }
         

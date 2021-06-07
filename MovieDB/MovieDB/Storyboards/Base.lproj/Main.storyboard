@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g15-BO-WZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="84"/>
+            <point key="canvasLocation" x="1502.8985507246377" y="83.705357142857139"/>
         </scene>
         <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -61,37 +61,52 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="FIlms2019.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="FW4-Dw-QoO">
                                         <rect key="frame" x="0.0" y="-17" width="414" height="739"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pka-HS-9NO">
-                                        <rect key="frame" x="20" y="19" width="374" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-RB-06t">
+                                        <rect key="frame" x="20" y="20" width="374" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pka-HS-9NO">
+                                                <rect key="frame" x="10" y="10" width="354" height="73"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="34"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="za8-w2-LbD"/>
+                                            <constraint firstItem="pka-HS-9NO" firstAttribute="leading" secondItem="cYH-RB-06t" secondAttribute="leading" constant="10" id="a6y-43-7D8"/>
+                                            <constraint firstAttribute="bottom" secondItem="pka-HS-9NO" secondAttribute="bottom" id="b2q-zP-L6r"/>
+                                            <constraint firstAttribute="trailing" secondItem="pka-HS-9NO" secondAttribute="trailing" constant="10" id="scO-zU-gn3"/>
+                                            <constraint firstItem="pka-HS-9NO" firstAttribute="top" secondItem="cYH-RB-06t" secondAttribute="top" constant="10" id="ySO-sn-ZRM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="34"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="shadowOffset" width="5" height="3"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-I3-wEO">
-                                        <rect key="frame" x="60" y="356" width="291" height="40"/>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-I3-wEO">
+                                        <rect key="frame" x="60" y="343" width="294" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="J0C-Lh-DWD"/>
+                                            <constraint firstAttribute="height" constant="50" id="J0C-Lh-DWD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="25"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="5" height="5"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-Sb-jM0">
-                                        <rect key="frame" x="60" y="426" width="294" height="27"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-Sb-jM0">
+                                        <rect key="frame" x="60" y="423" width="294" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qhb-ic-eTA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="5" height="5"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-hj-8c3" userLabel="Overview">
-                                        <rect key="frame" x="32" y="485" width="347" height="175"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="32" y="485" width="350" height="175"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="Hq5-AL-vpl"/>
                                         </constraints>
@@ -103,14 +118,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="pka-HS-9NO" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="top" constant="19" id="3Ro-Me-pvZ"/>
                                     <constraint firstAttribute="trailing" secondItem="FW4-Dw-QoO" secondAttribute="trailing" id="6kx-nc-ulj"/>
-                                    <constraint firstItem="pka-HS-9NO" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="20" id="7xR-9D-1qK"/>
                                     <constraint firstItem="ky6-hj-8c3" firstAttribute="top" secondItem="lq3-Sb-jM0" secondAttribute="bottom" constant="32" id="8DH-dM-kwu"/>
-                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="centerX" secondItem="lq3-Sb-jM0" secondAttribute="centerX" constant="-1.5" id="FqR-Ie-NBZ"/>
+                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="centerX" secondItem="lq3-Sb-jM0" secondAttribute="centerX" id="FqR-Ie-NBZ"/>
                                     <constraint firstAttribute="trailing" secondItem="lq3-Sb-jM0" secondAttribute="trailing" priority="750" constant="60" id="OEX-wH-itc"/>
                                     <constraint firstItem="lq3-Sb-jM0" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="60" id="Rek-86-kr5"/>
-                                    <constraint firstAttribute="trailing" secondItem="pka-HS-9NO" secondAttribute="trailing" constant="20" id="XNy-xg-faE"/>
                                     <constraint firstItem="ky6-hj-8c3" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="32" id="Yle-Fw-XTz"/>
                                     <constraint firstItem="FW4-Dw-QoO" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="top" constant="-17" id="bi1-6a-cZL"/>
                                     <constraint firstItem="lq3-Sb-jM0" firstAttribute="top" secondItem="HS1-I3-wEO" secondAttribute="bottom" constant="30" id="c2o-fY-DNV"/>
@@ -124,10 +136,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="b6v-Dx-iHt" firstAttribute="top" secondItem="cYH-RB-06t" secondAttribute="bottom" constant="619" id="12n-Cn-2si"/>
+                            <constraint firstItem="cYH-RB-06t" firstAttribute="top" secondItem="rkt-Py-mPg" secondAttribute="bottom" constant="20" id="328-9s-Zfw"/>
+                            <constraint firstItem="cYH-RB-06t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ABx-o2-ogz"/>
                             <constraint firstItem="t1i-K4-41Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DYF-fS-nTf"/>
                             <constraint firstItem="b6v-Dx-iHt" firstAttribute="top" secondItem="t1i-K4-41Y" secondAttribute="bottom" id="iab-lY-NLf"/>
                             <constraint firstItem="t1i-K4-41Y" firstAttribute="top" secondItem="rkt-Py-mPg" secondAttribute="bottom" id="kik-aW-qz0"/>
                             <constraint firstAttribute="trailing" secondItem="t1i-K4-41Y" secondAttribute="trailing" id="uS7-xQ-zCf"/>
+                            <constraint firstAttribute="trailing" secondItem="cYH-RB-06t" secondAttribute="trailing" constant="20" id="yL4-wL-GaR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CHJ-15-N2q"/>
@@ -137,6 +153,7 @@
                         <outlet property="overview" destination="ky6-hj-8c3" id="8Dh-AU-cJA"/>
                         <outlet property="releaseDate" destination="lq3-Sb-jM0" id="dx2-Ly-tzT"/>
                         <outlet property="titleMovie" destination="pka-HS-9NO" id="vmP-Jf-IMC"/>
+                        <outlet property="viewTest" destination="cYH-RB-06t" id="p2e-3Q-ctm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,9 +172,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WeI-it-tat">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WeI-it-tat">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
