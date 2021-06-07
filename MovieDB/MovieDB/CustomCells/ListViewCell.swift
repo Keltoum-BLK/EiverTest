@@ -23,8 +23,7 @@ class ListViewCell: UITableViewCell {
         titleMovie.text = movie.title
         date.text = convertDateFormater(movie.releaseDate)
         descMovie.text = movie.overview
-        posterMovie.loadPoster(185, movie.posterImage ?? "no image")
-    }
+        posterMovie.downloaded(from: "https://image.tmdb.org/t/p/w92\(String(describing: movie.logoImage))")    }
     
     func convertDateFormater(_ date: String?) -> String {
             var fixDate = ""
@@ -40,19 +39,19 @@ class ListViewCell: UITableViewCell {
         }
 }
 
-extension UIImageView {
-
-    func loadPoster(_ size: Int, _ path: String) {
-        let urlString = "https://image.tmdb.org/t/p/w\(size)\(path)"
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (d, _, _) in
-            DispatchQueue.main.async {
-                if let data = d {
-                    self.image = UIImage(data: data)
-
-                }
-            }
-        }.resume()
-    }
-    
-}
+//extension UIImageView {
+//
+//    func loadPoster(_ size: Int, _ path: String) {
+//        let urlString = "https://image.tmdb.org/t/p/w\(size)\(path)"
+//        guard let url = URL(string: urlString) else { return }
+//        URLSession.shared.dataTask(with: url) { (d, _, _) in
+//            DispatchQueue.main.async {
+//                if let data = d {
+//                    self.image = UIImage(data: data)
+//
+//                }
+//            }
+//        }.resume()
+//    }
+//
+//}

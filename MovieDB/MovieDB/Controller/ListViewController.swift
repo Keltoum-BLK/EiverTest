@@ -24,6 +24,7 @@ class ListViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        setUpTableView()
         //service
         let ID = getIntToString(id: genderId)
         print(ID)
@@ -41,6 +42,9 @@ class ListViewController: UIViewController {
         }
     }
     
+    private func setUpTableView() {
+        tableView.register(UINib(nibName: "MovieViewCell", bundle: nil), forCellReuseIdentifier: "MovieViewCell")
+    }
     
     func convertDateFormater(_ date: String?) -> String {
             var fixDate = ""
@@ -63,6 +67,15 @@ class ListViewController: UIViewController {
         return strData
     }
     
+    func getToString(str: String?)-> (String) {
+        //convert a Int? to String
+        let str = readLine()
+        // unwrapped the optional with a guard let syntaxe
+        guard let strImage = str  else { return "" }
+        return strImage
+    }
+
+    
     
 }
 
@@ -76,9 +89,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = UITableViewCell()
-        cell.textLabel?.text = listArray?[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieViewCell", for: indexPath) as! MovieViewCell
+        cell.titleMovie.text = listArray?[indexPath.row].title
+        let path = getToString(str: listArray?[indexPath.row].logoImage)
+        cell.logoMovie.downloaded(from: "https://image.tmdb.org/t/p/w92\(path)")
+        cell.releaseDateMovie.text = convertDateFormater(listArray?[indexPath.row].releaseDate)
+//        let cell = UITableViewCell()
+//        cell.textLabel?.text = listArray?[indexPath.row].title
         return cell
     }
     

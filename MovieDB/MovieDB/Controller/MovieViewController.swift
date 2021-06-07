@@ -57,7 +57,7 @@ class MovieViewController: UIViewController {
         originalTitle.text = selectedMovie.originalTitle
         overview.text = selectedMovie.overview
         releaseDate.text = convertDateFormater(selectedMovie.releaseDate)
-        backgroundImage.load(780, selectedMovie.posterPath ?? "no image")
+        backgroundImage.loadPoster(780, selectedMovie.posterPath ?? "no poster")
         
     }
 
@@ -82,24 +82,15 @@ class MovieViewController: UIViewController {
         guard let strData = ID else { return "aie" }
         return strData
     }
-
-
-}
-
-extension UIImageView {
-
-    func load(_ size: Int, _ path: String) {
-        let urlString = "https://image.tmdb.org/t/p/w\(size)\(path)"
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (d, _, _) in
-            DispatchQueue.main.async {
-                if let data = d {
-                    self.image = UIImage(data: data)
-
-                }
-            }
-        }.resume()
-    }
     
+    func getToString(str: String?)-> (String) {
+        //convert a Int? to String
+        let str = readLine()
+        // unwrapped the optional with a guard let syntaxe
+        guard let strImage = str  else { return "" }
+        return strImage
+    }
+
 }
+
 
