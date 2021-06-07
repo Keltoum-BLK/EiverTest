@@ -24,7 +24,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yre-Dx-DMG">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yre-Dx-DMG">
                         <rect key="frame" x="14" y="14" width="85" height="125.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Yre-Dx-DMG" secondAttribute="height" multiplier="1:1" constant="-40.5" id="F3K-YF-hHi"/>
@@ -42,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.5746835470199585" green="0.7034267783164978" blue="0.91392499208450317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="f5c-an-gzg" secondAttribute="trailing" constant="40" id="BRV-Zq-xoY"/>
                     <constraint firstAttribute="bottom" secondItem="Yre-Dx-DMG" secondAttribute="bottom" constant="10.5" id="MEC-1J-jGl"/>
