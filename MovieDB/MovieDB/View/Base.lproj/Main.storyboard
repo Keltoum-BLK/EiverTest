@@ -61,37 +61,43 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="FIlms2019.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="FW4-Dw-QoO">
                                         <rect key="frame" x="0.0" y="-17" width="414" height="739"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pka-HS-9NO">
-                                        <rect key="frame" x="20" y="19" width="374" height="40"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pka-HS-9NO">
+                                        <rect key="frame" x="20" y="19" width="374" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="za8-w2-LbD"/>
+                                            <constraint firstAttribute="height" constant="60" id="za8-w2-LbD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="34"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="shadowOffset" width="5" height="3"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-I3-wEO">
-                                        <rect key="frame" x="60" y="356" width="291" height="40"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-I3-wEO">
+                                        <rect key="frame" x="60" y="343" width="294" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="J0C-Lh-DWD"/>
+                                            <constraint firstAttribute="height" constant="50" id="J0C-Lh-DWD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="5" height="5"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-Sb-jM0">
-                                        <rect key="frame" x="60" y="426" width="294" height="27"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-Sb-jM0">
+                                        <rect key="frame" x="60" y="423" width="294" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qhb-ic-eTA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="5" height="5"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-hj-8c3" userLabel="Overview">
-                                        <rect key="frame" x="32" y="485" width="347" height="175"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="32" y="485" width="350" height="175"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="Hq5-AL-vpl"/>
                                         </constraints>
@@ -107,7 +113,7 @@
                                     <constraint firstAttribute="trailing" secondItem="FW4-Dw-QoO" secondAttribute="trailing" id="6kx-nc-ulj"/>
                                     <constraint firstItem="pka-HS-9NO" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="20" id="7xR-9D-1qK"/>
                                     <constraint firstItem="ky6-hj-8c3" firstAttribute="top" secondItem="lq3-Sb-jM0" secondAttribute="bottom" constant="32" id="8DH-dM-kwu"/>
-                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="centerX" secondItem="lq3-Sb-jM0" secondAttribute="centerX" constant="-1.5" id="FqR-Ie-NBZ"/>
+                                    <constraint firstItem="ky6-hj-8c3" firstAttribute="centerX" secondItem="lq3-Sb-jM0" secondAttribute="centerX" id="FqR-Ie-NBZ"/>
                                     <constraint firstAttribute="trailing" secondItem="lq3-Sb-jM0" secondAttribute="trailing" priority="750" constant="60" id="OEX-wH-itc"/>
                                     <constraint firstItem="lq3-Sb-jM0" firstAttribute="leading" secondItem="t1i-K4-41Y" secondAttribute="leading" constant="60" id="Rek-86-kr5"/>
                                     <constraint firstAttribute="trailing" secondItem="pka-HS-9NO" secondAttribute="trailing" constant="20" id="XNy-xg-faE"/>

@@ -42,19 +42,19 @@ extension UIImageView {
             }
         }.resume()
     }
-//
-//    func loadLogo( path: String) {
-//        let urlString = "https://image.tmdb.org/t/p/w92\(path)"
-//        guard let url = URL(string: urlString) else { return }
-//        URLSession.shared.dataTask(with: url) { (d, _, _) in
-//            DispatchQueue.main.async {
-//                if let data = d {
-//                    self.image = UIImage(data: data)
-//
-//                }
-//            }
-//        }.resume()
-//    }
+
+    func loadLogo( path: String) {
+        let urlString = "https://image.tmdb.org/t/p/w92&h92\(path)"
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { (d, _, _) in
+            DispatchQueue.main.async {
+                if let data = d {
+                    self.image = UIImage(data: data)
+
+                }
+            }
+        }.resume()
+    }
 
 }
 

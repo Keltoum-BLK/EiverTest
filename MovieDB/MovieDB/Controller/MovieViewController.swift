@@ -8,9 +8,9 @@
 import UIKit
 
 class MovieViewController: UIViewController {
-
-
-
+    
+    
+    
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var titleMovie: UILabel!
@@ -18,22 +18,18 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var overview: UITextView!
     
-    
-   
     var movieID: Int?
     var movie: MovieModel?
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //GradientView
-      
         print("MOVIEID ->", movieID ?? "")
-        // Do any additional setup after loading the view.
         
-      
-        let ID = getIntToString(id: movieID)
-
+        
+        
+        let ID = Tool.shared.getIntToString(id: movieID)
+        
         ApiManager.shared.getMovieDetails(movieID: ID, completionHandler: { result in
             switch result {
             case .success(let use):
@@ -50,47 +46,26 @@ class MovieViewController: UIViewController {
         
     }
     
-
+    
     func setUp(){
         guard let selectedMovie = movie else { return }
         titleMovie.text = selectedMovie.title
         originalTitle.text = selectedMovie.originalTitle
-        overview.text = selectedMovie.overview
-        releaseDate.text = convertDateFormater(selectedMovie.releaseDate)
+        if selectedMovie.overview != ""{
+            overview.text = selectedMovie.overview
+        } else {
+            overview.isHidden = true
+        }
+        releaseDate.text = Tool.shared.convertDateFormater(selectedMovie.releaseDate)
         backgroundImage.loadPoster(780, selectedMovie.posterPath ?? "no poster")
+        backgroundImage.contentMode = .scaleToFill
+        overview.layer.cornerRadius = 10
+        releaseDate.layer.cornerRadius = 10
+        titleMovie.layer.cornerRadius = 10
+        originalTitle.layer.cornerRadius = 10
         
     }
-
-    
-    func convertDateFormater(_ date: String?) -> String {
-            var fixDate = ""
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            if let originalDate = date {
-                if let newDate = dateFormatter.date(from: originalDate) {
-                    dateFormatter.dateFormat = "dd.MM.yyyy"
-                    fixDate = dateFormatter.string(from: newDate)
-                }
-            }
-            return fixDate
-        }
-    
-    func getIntToString(id : Int?)-> (String) {
-        //convert a Int? to String
-        let ID = id.flatMap { String($0) }
-        // unwrapped the optional with a guard let syntaxe
-        guard let strData = ID else { return "aie" }
-        return strData
-    }
-    
-    func getToString(str: String?)-> (String) {
-        //convert a Int? to String
-        let str = readLine()
-        // unwrapped the optional with a guard let syntaxe
-        guard let strImage = str  else { return "" }
-        return strImage
-    }
-
+ 
 }
 
 

@@ -12,6 +12,7 @@ class ListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     var genderId: Int?
     private var listArray: [ListMovie]?
     private var titlemovie : ListMovie?
@@ -26,7 +27,7 @@ class ListViewController: UIViewController {
         
         setUpTableView()
         //service
-        let ID = getIntToString(id: genderId)
+        let ID = Tool.shared.getIntToString(id: genderId)
         print(ID)
         ApiManager.shared.getListOfMoviesGender(genreID: ID) {  result in
             switch result {
@@ -46,35 +47,7 @@ class ListViewController: UIViewController {
         tableView.register(UINib(nibName: "MovieViewCell", bundle: nil), forCellReuseIdentifier: "MovieViewCell")
     }
     
-    func convertDateFormater(_ date: String?) -> String {
-            var fixDate = ""
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            if let originalDate = date {
-                if let newDate = dateFormatter.date(from: originalDate) {
-                    dateFormatter.dateFormat = "dd.MM.yyyy"
-                    fixDate = dateFormatter.string(from: newDate)
-                }
-            }
-            return fixDate
-        }
-    
-    func getIntToString(id : Int?)-> (String) {
-        //convert a Int? to String
-        let ID = id.flatMap { String($0) }
-        // unwrapped the optional with a guard let syntaxe
-        guard let strData = ID else { return "aie" }
-        return strData
-    }
-    
-    func getToString(str: String?)-> (String) {
-        //convert a Int? to String
-        let str = readLine()
-        // unwrapped the optional with a guard let syntaxe
-        guard let strImage = str  else { return "" }
-        return strImage
-    }
-
+ 
     
     
 }
@@ -91,9 +64,9 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieViewCell", for: indexPath) as! MovieViewCell
         cell.titleMovie.text = listArray?[indexPath.row].title
-        let path = getToString(str: listArray?[indexPath.row].logoImage)
-        cell.logoMovie.downloaded(from: "https://image.tmdb.org/t/p/w92\(path)")
-        cell.releaseDateMovie.text = convertDateFormater(listArray?[indexPath.row].releaseDate)
+        cell.logoMovie.downloaded(from: "https://image.tmdb.org/t/p/w300\(listArray?[indexPath.row].logoImage ?? "no image")")
+        cell.releaseDateMovie.text = Tool.shared.convertDateFormater(listArray?[indexPath.row].releaseDate)
+        print("https://image.tmdb.org/t/p/w300\(listArray?[indexPath.row].logoImage ?? "no image")")
 //        let cell = UITableViewCell()
 //        cell.textLabel?.text = listArray?[indexPath.row].title
         return cell
