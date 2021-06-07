@@ -64,7 +64,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieViewCell", for: indexPath) as! MovieViewCell
         cell.titleMovie.text = listArray?[indexPath.row].title
-        cell.logoMovie.downloaded(from: "https://image.tmdb.org/t/p/w300\(listArray?[indexPath.row].logoImage ?? "no image")")
+        cell.logoMovie.downloaded(from: "https://image.tmdb.org/t/p/w185\(listArray?[indexPath.row].logoImage ?? "no image")")
         cell.releaseDateMovie.text = Tool.shared.convertDateFormater(listArray?[indexPath.row].releaseDate)
         return cell
     }
