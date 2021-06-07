@@ -64,6 +64,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieViewCell", for: indexPath) as! MovieViewCell
         cell.titleMovie.text = listArray?[indexPath.row].title
+        if listArray?[indexPath.row].logoImage == nil {
+            cell.logoMovie.image = UIImage(named: "affiche")
+            cell.logoMovie.contentMode = .scaleAspectFit
+        }
         cell.logoMovie.downloaded(from: "https://image.tmdb.org/t/p/w185\(listArray?[indexPath.row].logoImage ?? "no image")")
         cell.releaseDateMovie.text = Tool.shared.convertDateFormater(listArray?[indexPath.row].releaseDate)
         return cell
@@ -76,15 +80,14 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
-//        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let moviesVC = storyboard.instantiateViewController(identifier: "movieVC") as! MovieViewCardController
         let movieVC = MovieCardViewController(nibName: "MovieCardViewController", bundle: nil)
         movieVC.movieID = listArray?[indexPath.row].id
         self.present(movieVC, animated: true, completion: nil)
     }
 
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
 
 }
 

@@ -16,7 +16,6 @@ class GendersViewController: UIViewController {
         super.viewDidLoad()
         genderTableView.delegate = self
         genderTableView.dataSource = self
-        
         // service
         ApiManager.shared.getGenre { result in
             switch result {

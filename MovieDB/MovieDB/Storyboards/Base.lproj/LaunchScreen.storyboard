@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sfr-OM-qpV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenMovie" translatesAutoresizingMaskIntoConstraints="NO" id="Sfr-OM-qpV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
@@ -34,7 +34,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png" width="828" height="1792"/>
+        <image name="screenMovie" width="828" height="1792"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

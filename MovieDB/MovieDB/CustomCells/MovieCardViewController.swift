@@ -8,13 +8,13 @@
 import UIKit
 
 class MovieCardViewController: UIViewController {
-
+    
     @IBOutlet weak var backPoster: UIImageView!
     @IBOutlet weak var titleMovie: UILabel!
     @IBOutlet weak var originalTitle: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var overview: UITextView!
-//Back View
+    //Back View
     @IBOutlet weak var viewTitle: UIView!
     @IBOutlet weak var viewOriginalTitle: UIView!
     @IBOutlet weak var viewDate: UIView!
@@ -27,11 +27,7 @@ class MovieCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MOVIEID ->", movieID ?? "")
-        
-        
-        
         let ID = Tool.shared.getIntToString(id: movieID)
-        
         ApiManager.shared.getMovieDetails(movieID: ID, completionHandler: { result in
             switch result {
             case .success(let use):
@@ -42,7 +38,6 @@ class MovieCardViewController: UIViewController {
                 }
             case .failure(let error):
                 print(error.localizedDescription)
-                
             }
         })
         
@@ -52,14 +47,17 @@ class MovieCardViewController: UIViewController {
         guard let selectedMovie = movie else { return }
         titleMovie.text = selectedMovie.title
         originalTitle.text = selectedMovie.originalTitle
-        if selectedMovie.overview != ""{
-            overview.text = selectedMovie.overview
-        } else {
+        overview.text = selectedMovie.overview
+        if overview.text == "" {
             overview.isHidden = true
+            viewOverview.isHidden = true
         }
         date.text = selectedMovie.releaseDate
         backPoster.downloaded(from: "https://image.tmdb.org/t/p/w780\(selectedMovie.posterPath ?? "no poster")")
         backPoster.contentMode = .scaleToFill
+        if selectedMovie.posterPath == nil {
+            backPoster.image = UIImage(named: "affiche")
+        }
         viewDate.layer.cornerRadius = 10
         viewTitle.layer.cornerRadius = 10
         viewOverview.layer.cornerRadius = 10
@@ -67,10 +65,10 @@ class MovieCardViewController: UIViewController {
         viewTitle.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         viewOriginalTitle.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         viewDate.backgroundColor = UIColor.white.withAlphaComponent(0.6)
-        viewOverview.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        viewOverview.backgroundColor = UIColor.white.withAlphaComponent(0.7)
     }
- 
-
- 
-
+    
+    
+    
+    
 }
