@@ -24,37 +24,11 @@ extension UIImageView {
                 }
             }.resume()
         }
+    
     func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
             guard let url = URL(string: link) else { return }
             downloaded(from: url, contentMode: mode)
-        print(url)
         }
-    
-    func loadPoster(_ size: Int, _ path: String) {
-        let urlString = "https://image.tmdb.org/t/p/w780\(path)"
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (d, _, _) in
-            DispatchQueue.main.async {
-                if let data = d {
-                    self.image = UIImage(data: data)
-
-                }
-            }
-        }.resume()
-    }
-
-    func loadLogo( path: String) {
-        let urlString = "https://image.tmdb.org/t/p/w92&h92\(path)"
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (d, _, _) in
-            DispatchQueue.main.async {
-                if let data = d {
-                    self.image = UIImage(data: data)
-
-                }
-            }
-        }.resume()
-    }
 
 }
 

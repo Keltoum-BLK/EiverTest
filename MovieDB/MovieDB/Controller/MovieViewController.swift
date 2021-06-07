@@ -57,7 +57,7 @@ class MovieViewController: UIViewController {
             overview.isHidden = true
         }
         releaseDate.text = Tool.shared.convertDateFormater(selectedMovie.releaseDate)
-        backgroundImage.loadPoster(780, selectedMovie.posterPath ?? "no poster")
+        backgroundImage.downloaded(from: "https://image.tmdb.org/t/p/w780\(selectedMovie.posterPath ?? "no poster")")
         backgroundImage.contentMode = .scaleToFill
         overview.layer.cornerRadius = 10
         releaseDate.layer.cornerRadius = 10

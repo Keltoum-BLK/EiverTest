@@ -66,9 +66,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleMovie.text = listArray?[indexPath.row].title
         cell.logoMovie.downloaded(from: "https://image.tmdb.org/t/p/w300\(listArray?[indexPath.row].logoImage ?? "no image")")
         cell.releaseDateMovie.text = Tool.shared.convertDateFormater(listArray?[indexPath.row].releaseDate)
-        print("https://image.tmdb.org/t/p/w300\(listArray?[indexPath.row].logoImage ?? "no image")")
-//        let cell = UITableViewCell()
-//        cell.textLabel?.text = listArray?[indexPath.row].title
         return cell
     }
     

@@ -32,7 +32,7 @@ struct ListMovie: Decodable {
         case overview
         case releaseDate = "release_date"
         case title
-        case logoImage = "logo_path"
+        case logoImage = "poster_path"
     }
 }
 

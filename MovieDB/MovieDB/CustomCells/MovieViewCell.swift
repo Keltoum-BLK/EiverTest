@@ -13,9 +13,5 @@ class MovieViewCell: UITableViewCell {
     @IBOutlet weak var titleMovie: UILabel!
     @IBOutlet weak var releaseDateMovie: UILabel!
     @IBOutlet weak var logoMovie: UIImageView!
-    
-    
-    
-    
-    
+    @IBOutlet weak var viewCell: UIView!
 }
