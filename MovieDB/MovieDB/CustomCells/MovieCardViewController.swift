@@ -26,12 +26,10 @@ class MovieCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("MOVIEID ->", movieID ?? "")
         let ID = Tool.shared.getIntToString(id: movieID)
         ApiManager.shared.getMovieDetails(movieID: ID, completionHandler: { result in
             switch result {
             case .success(let use):
-                // guard let movie = use else { return }
                 DispatchQueue.main.async {
                     self.movie = use
                     self.setUp()

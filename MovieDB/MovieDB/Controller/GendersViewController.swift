@@ -11,7 +11,7 @@ class GendersViewController: UIViewController {
     @IBOutlet weak var genderTableView: UITableView!
     
     private var genderArray: [GenreModel]?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         genderTableView.delegate = self
@@ -45,13 +45,12 @@ extension GendersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       //  Verification Optionnel
+        //  Verification Optionnel
         guard let gendersCount = genderArray?.count else {return 0}
         return gendersCount
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(genderArray![indexPath.row].name, genderArray![indexPath.row].id)
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let moviesVC = storyboard.instantiateViewController(identifier: "listVC") as! ListViewController
         moviesVC.genderId = genderArray![indexPath.row].id

@@ -20,15 +20,11 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Genre ->", genderId ?? "")
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
         setUpTableView()
         //service
         let ID = Tool.shared.getIntToString(id: genderId)
-        print(ID)
         ApiManager.shared.getListOfMoviesGender(genreID: ID) {  result in
             switch result {
             case .success(let use):
@@ -47,7 +43,7 @@ class ListViewController: UIViewController {
         tableView.register(UINib(nibName: "MovieViewCell", bundle: nil), forCellReuseIdentifier: "MovieViewCell")
     }
     
- 
+    
     
     
 }
@@ -84,11 +80,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         movieVC.movieID = listArray?[indexPath.row].id
         self.present(movieVC, animated: true, completion: nil)
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
     }
-
+    
 }
 
 
