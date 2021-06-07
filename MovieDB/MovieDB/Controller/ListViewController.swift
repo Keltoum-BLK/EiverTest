@@ -77,10 +77,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let moviesVC = storyboard.instantiateViewController(identifier: "movieVC") as! MovieViewController
-        moviesVC.movieID = listArray![indexPath.row].id
-        self.present(moviesVC, animated: true, completion: nil)
+//        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let moviesVC = storyboard.instantiateViewController(identifier: "movieVC") as! MovieViewCardController
+        let movieVC = MovieCardViewController(nibName: "MovieCardViewController", bundle: nil)
+        movieVC.movieID = listArray?[indexPath.row].id
+        self.present(movieVC, animated: true, completion: nil)
     }
 
     

@@ -62,7 +62,7 @@
                                         <rect key="frame" x="0.0" y="-17" width="414" height="739"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-RB-06t">
-                                        <rect key="frame" x="20" y="20" width="374" height="93"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="83"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pka-HS-9NO">
                                                 <rect key="frame" x="10" y="10" width="354" height="73"/>
@@ -77,7 +77,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="pka-HS-9NO" firstAttribute="leading" secondItem="cYH-RB-06t" secondAttribute="leading" constant="10" id="a6y-43-7D8"/>
-                                            <constraint firstAttribute="bottom" secondItem="pka-HS-9NO" secondAttribute="bottom" constant="10" id="b2q-zP-L6r"/>
+                                            <constraint firstAttribute="bottom" secondItem="pka-HS-9NO" secondAttribute="bottom" id="b2q-zP-L6r"/>
                                             <constraint firstAttribute="trailing" secondItem="pka-HS-9NO" secondAttribute="trailing" constant="10" id="scO-zU-gn3"/>
                                             <constraint firstItem="pka-HS-9NO" firstAttribute="top" secondItem="cYH-RB-06t" secondAttribute="top" constant="10" id="ySO-sn-ZRM"/>
                                         </constraints>
@@ -136,7 +136,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="b6v-Dx-iHt" firstAttribute="top" secondItem="cYH-RB-06t" secondAttribute="bottom" constant="609" id="12n-Cn-2si"/>
+                            <constraint firstItem="b6v-Dx-iHt" firstAttribute="top" secondItem="cYH-RB-06t" secondAttribute="bottom" constant="619" id="12n-Cn-2si"/>
                             <constraint firstItem="cYH-RB-06t" firstAttribute="top" secondItem="rkt-Py-mPg" secondAttribute="bottom" constant="20" id="328-9s-Zfw"/>
                             <constraint firstItem="cYH-RB-06t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ABx-o2-ogz"/>
                             <constraint firstItem="t1i-K4-41Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DYF-fS-nTf"/>

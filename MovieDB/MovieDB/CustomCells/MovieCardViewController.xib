@@ -30,11 +30,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Pl-pI-a74">
-                    <rect key="frame" x="20" y="50" width="374" height="70"/>
+                    <rect key="frame" x="20" y="50" width="374" height="56"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pp-Lh-7u9">
-                            <rect key="frame" x="10" y="10" width="354" height="50"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="31"/>
+                            <rect key="frame" x="10" y="10" width="354" height="36"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -88,7 +88,7 @@
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6m-rP-WVO">
                             <rect key="frame" x="20" y="20" width="287" height="149"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <color key="textColor" systemColor="labelColor"/>
                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
@@ -108,7 +108,6 @@
             <constraints>
                 <constraint firstItem="0Pl-pI-a74" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="2Cm-fO-5LM"/>
                 <constraint firstItem="qRE-ii-Ume" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="87" id="5d6-9K-Qig"/>
-                <constraint firstItem="Rnq-QH-rIA" firstAttribute="top" secondItem="0Pl-pI-a74" secondAttribute="bottom" constant="341" id="5v7-Hl-rnq"/>
                 <constraint firstItem="0Pl-pI-a74" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="8j0-1W-e3Y"/>
                 <constraint firstItem="1A2-nt-hBh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="AIV-xh-ObX"/>
                 <constraint firstAttribute="trailing" secondItem="Rnq-QH-rIA" secondAttribute="trailing" constant="60" id="ASn-6X-1hT"/>
