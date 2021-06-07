@@ -14,7 +14,8 @@
 		B92DF849266E03A900868C3C /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92DF847266E03A900868C3C /* MovieViewCell.xib */; };
 		B92DF855266E24CC00868C3C /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DF854266E24CC00868C3C /* Tool.swift */; };
 		B92DF858266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png in Resources */ = {isa = PBXBuildFile; fileRef = B92DF857266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png */; };
-		B936ED5D26679B790016C56B /* CinematograficaB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B936ED5C26679B790016C56B /* CinematograficaB.ttf */; };
+		B92DF85C266E5C6400868C3C /* MovieCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92DF85A266E5C6400868C3C /* MovieCardViewController.swift */; };
+		B92DF85D266E5C6400868C3C /* MovieCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92DF85B266E5C6400868C3C /* MovieCardViewController.xib */; };
 		B94D1C212666D2BC00ECF9A7 /* FIlms2019.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B94D1C202666D2BC00ECF9A7 /* FIlms2019.jpeg */; };
 		B94D1C242666D84B00ECF9A7 /* ListMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D1C232666D84B00ECF9A7 /* ListMovie.swift */; };
 		B94D1C282666DBCD00ECF9A7 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D1C272666DBCD00ECF9A7 /* ApiManager.swift */; };
@@ -36,7 +37,8 @@
 		B92DF847266E03A900868C3C /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 		B92DF854266E24CC00868C3C /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		B92DF857266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png"; path = "../../../Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png"; sourceTree = "<group>"; };
-		B936ED5C26679B790016C56B /* CinematograficaB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = CinematograficaB.ttf; path = ../../../CinematograficaB.ttf; sourceTree = "<group>"; };
+		B92DF85A266E5C6400868C3C /* MovieCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardViewController.swift; sourceTree = "<group>"; };
+		B92DF85B266E5C6400868C3C /* MovieCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCardViewController.xib; sourceTree = "<group>"; };
 		B94D1C202666D2BC00ECF9A7 /* FIlms2019.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FIlms2019.jpeg; sourceTree = "<group>"; };
 		B94D1C232666D84B00ECF9A7 /* ListMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovie.swift; sourceTree = "<group>"; };
 		B94D1C272666DBCD00ECF9A7 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		5D895794266909AC00B350CB /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				B92DF85A266E5C6400868C3C /* MovieCardViewController.swift */,
+				B92DF85B266E5C6400868C3C /* MovieCardViewController.xib */,
 				B92DF846266E03A900868C3C /* MovieViewCell.swift */,
 				B92DF847266E03A900868C3C /* MovieViewCell.xib */,
 			);
@@ -163,7 +167,6 @@
 				B967899D2666D1C800E6B7FB /* Assets.xcassets */,
 				B96789942666D1C700E6B7FB /* AppDelegate.swift */,
 				B96789962666D1C700E6B7FB /* SceneDelegate.swift */,
-				B936ED5C26679B790016C56B /* CinematograficaB.ttf */,
 				B92DF857266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png */,
 				B94D1C202666D2BC00ECF9A7 /* FIlms2019.jpeg */,
 			);
@@ -228,10 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B92DF849266E03A900868C3C /* MovieViewCell.xib in Resources */,
-				B936ED5D26679B790016C56B /* CinematograficaB.ttf in Resources */,
 				B96789A12666D1C800E6B7FB /* LaunchScreen.storyboard in Resources */,
 				B94D1C212666D2BC00ECF9A7 /* FIlms2019.jpeg in Resources */,
 				B92DF858266E44F800868C3C /* Simulator Screen Shot - iPhone 11 - 2021-06-07 at 14.12.32.png in Resources */,
+				B92DF85D266E5C6400868C3C /* MovieCardViewController.xib in Resources */,
 				B967899E2666D1C800E6B7FB /* Assets.xcassets in Resources */,
 				B967899C2666D1C700E6B7FB /* Main.storyboard in Resources */,
 			);
@@ -247,6 +250,7 @@
 				B94D1C282666DBCD00ECF9A7 /* ApiManager.swift in Sources */,
 				B92DF848266E03A900868C3C /* MovieViewCell.swift in Sources */,
 				5D8957902667F61200B350CB /* GenreModel.swift in Sources */,
+				B92DF85C266E5C6400868C3C /* MovieCardViewController.swift in Sources */,
 				B92DF845266DFAC800868C3C /* ExtensionUIImage.swift in Sources */,
 				B9CD4F33266CF72B00A8EB00 /* Movie.swift in Sources */,
 				B96789992666D1C700E6B7FB /* MovieViewController.swift in Sources */,

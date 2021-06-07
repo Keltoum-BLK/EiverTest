@@ -9,15 +9,6 @@ import UIKit
 
 class MovieViewController: UIViewController {
     
-    
-    
-    
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var titleMovie: UILabel!
-    @IBOutlet weak var originalTitle: UILabel!
-    @IBOutlet weak var releaseDate: UILabel!
-    @IBOutlet weak var overview: UITextView!
-    
     var movieID: Int?
     var movie: MovieModel?
     
@@ -63,7 +54,9 @@ class MovieViewController: UIViewController {
         releaseDate.layer.cornerRadius = 10
         titleMovie.layer.cornerRadius = 10
         originalTitle.layer.cornerRadius = 10
-        
+        viewTest.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        viewTest.layer.cornerRadius = 10
+       
     }
  
 }
