@@ -9,6 +9,8 @@ import UIKit
 
 class MovieCardViewController: UIViewController {
     
+    //MARK: VARIABLES AND UIBOUTLET
+    //UIBoutlet to fletch data of API call
     @IBOutlet weak var backPoster: UIImageView!
     @IBOutlet weak var titleMovie: UILabel!
     @IBOutlet weak var originalTitle: UILabel!
@@ -40,7 +42,7 @@ class MovieCardViewController: UIViewController {
         })
         
     }
-    
+    //MARK: fletch data to UIBoutlet
     func setUp(){
         guard let selectedMovie = movie else { return }
         titleMovie.text = selectedMovie.title

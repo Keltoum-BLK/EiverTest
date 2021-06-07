@@ -6,14 +6,14 @@
 //
 
 import Foundation
-
+//MARK: Singleton pattern to use methods
 class Tool {
     
     static let shared = Tool()
     
-     init(){}
+    init(){}
     
-    
+    //convert optionnal string to date format
     func convertDateFormater(_ date: String?) -> String {
         var fixDate = ""
         let dateFormatter = DateFormatter()
@@ -26,7 +26,7 @@ class Tool {
         }
         return fixDate
     }
-    
+    //methods to cast optionnal to String
     func getIntToString(id : Int?)-> (String) {
         //convert a Int? to String
         let ID = id.flatMap { String($0) }
